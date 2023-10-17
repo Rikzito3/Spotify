@@ -1,0 +1,868 @@
+@font-face {
+  font-family: spotify;
+  src: url(/assets/fonts/CircularStd-Medium.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  border-style: border-box;
+  font-family: spotify;
+  color: #898989;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 14fr 3fr;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: 11fr 29fr;
+}
+
+.esquerdo {
+  display: grid;
+  grid-template-rows: 3fr 10fr;
+
+  margin: 1.2vh 1vh 0 1.2vh;
+  gap: 1vh;
+}
+
+.home {
+  border-radius: 1.4vh;
+
+  background-color: #202020;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+
+  margin: 2vh 0 0 1vh;
+
+  width: 20vh;
+  height: 7vh;
+
+  /* border: solid white 1px; */
+
+  cursor: pointer;
+
+  fill: #898989;
+}
+
+.pesquisar {
+  display: flex;
+  flex-direction: row;
+}
+
+.pesquisar:hover {
+  fill: white;
+}
+
+.search {
+  width: 15vh;
+  height: 5vh;
+
+  /* border: solid white 1px; */
+
+  margin: 0.4vh 1vh 0 3vh;
+
+  font-size: 2.8vh;
+
+  color: #bbb8b8;
+}
+
+.search:hover {
+  color: white;
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.icons2 {
+  width: 20vh;
+  height: 5vh;
+
+  /* border: solid white 1px; */
+  margin: 2vh 0 0 2.5vh;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-home {
+  width: 6vh;
+  height: 3.62vh;
+
+  font-size: 0.2vh;
+}
+
+.inicio {
+  color: #bbb8b8;
+
+  margin: 1vh 0 0 1.9vh;
+
+  font-size: 3vh;
+}
+
+.inicio:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.musicas {
+  border-radius: 1.4vh;
+
+  background-color: #202020;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  flex-direction: row;
+}
+
+.biblioteca {
+  margin: 1vh 0 0 2.5vh;
+
+  fill: #898989;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sua-biblioteca {
+  font-size: 2.7vh;
+
+  display: flex;
+  align-items: center;
+
+  margin: 2.1vh 0 1.5vh 2.2vh;
+
+  color: #bbb8b8;
+}
+
+.sua-biblioteca:hover {
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.topo {
+  margin: 1vh 0 0 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.mais-seta {
+  width: 13vh;
+  height: 5vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 2.2vh 5vh 0 0;
+
+  justify-content: space-between;
+}
+
+.mais {
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: #bbb8b8;
+}
+
+.seta {
+  height: 100%;
+  width: 50%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: #898989;
+}
+
+.mais:hover {
+  background-color: #89898922;
+  border-radius: 1000px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.seta:hover {
+  background-color: #89898922;
+  border-radius: 1000px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.musics {
+  width: 59vh;
+  height: 48vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.musica1 {
+  min-width: 45vh;
+  min-height: 10vh;
+
+  /* border: solid white 0.1px; */
+  margin: 2vh 0 0 2.2vh;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.musica1:hover {
+  background-color: #2a2a2a6e;
+  transition: 0.3s;
+
+  border-radius: 1.2vh;
+}
+
+.img1 {
+  width: 9.7vh;
+  height: 9.7vh;
+
+  /* border: solid white 0.1px; */
+}
+
+#img1 {
+  width: 9.7vh;
+  height: 9.7vh;
+
+  border-radius: 2vh;
+}
+
+.nome-legenda {
+  width: 30vh;
+  height: 4vh;
+
+  /* border: solid white 0.1px; */
+
+  color: white;
+
+  margin: 2.5vh 0 0 2vh;
+
+  font-size: 2.2vh;
+}
+
+#playlist-rb {
+  color: rgb(209, 208, 208);
+  font-size: 2.3vh;
+}
+
+span {
+  font-size: 1.9vh;
+  color: rgb(125, 125, 125);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.artistas-albuns {
+  width: 45vh;
+  height: 5vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 2vh 0 0 2vh;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 1.2vh;
+}
+
+.playlists {
+  width: 12.5vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.2vh;
+  background-color: #2a2a2a;
+
+  color: #e2e2e2;
+
+  border-radius: 10vh 10vh 10vh 10vh;
+}
+
+.playlists:hover {
+  background-color: #393939;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lupa-recentes {
+  width: 52vh;
+  height: 5vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 2vh 5vh 0 2vh;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.lupa {
+  width: 5vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #bbb8b8;
+}
+
+.lupa:hover {
+  background-color: #393939;
+  transition: 0.3s;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.recente {
+  width: 12vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  font-size: 2.3vh;
+
+  /* color: #898989; */
+}
+
+#select1 {
+  background-color: transparent;
+  border: none;
+
+  color: #bbb8b8;
+}
+
+.total {
+  border: solid black 0.1vh;
+  border-radius: 2vh;
+
+  margin: 1.2vh 1.2vh 0 0;
+
+  background-color: #202020;
+
+  gap: 1vh;
+}
+
+.cima {
+  width: 100%;
+  height: 10vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.setas {
+  width: 17vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.8vh;
+}
+
+.seta-esquerda {
+  width: 4.8vh;
+  height: 4.8vh;
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.seta-direita {
+  width: 4.8vh;
+  height: 4.8vh;
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+#setinhas {
+  width: 2vh;
+  height: 2vh;
+
+  color: white;
+}
+.instalar {
+  height: 100%;
+  width: 50vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5vh;
+}
+
+.instalar-app {
+  width: 25vh;
+  height: 5vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0f0f0f;
+
+  border-radius: 3vh;
+
+  gap: 1vh;
+
+  margin-right: 3vh;
+}
+
+#install {
+  font-size: 2.3vh;
+  color: white;
+}
+
+#install:hover {
+  font-size: 2.4vh;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.notifi {
+  width: 5.5vh;
+  height: 5.5vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0f0f0f;
+
+  border-radius: 100%;
+}
+
+.notifi:hover {
+  background-color: #5e5d5d;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#notificacao {
+  border-radius: 50%;
+}
+
+.perfil {
+  width: 5.5vh;
+  height: 5.5vh;
+
+  /* border: solid white 0.1px; */
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0f0f0f;
+}
+
+.perfil:hover {
+  background-color: #5e5d5d;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.local-das-musicas {
+  width: 145vh;
+  height: 72.6vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 0 0 0 4.3vh;
+
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.capa-do-album {
+  width: 143.1vh;
+  height: 35vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  justify-content: left;
+
+  gap: 1vh;
+}
+
+.foto {
+  width: 40vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  flex-direction: row;
+}
+
+#img-do-album {
+  width: 100%;
+  height: 100%;
+}
+
+.dados {
+  width: 40vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+}
+
+.paragrafo {
+  width: 100%;
+  height: 1vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 0 0 6vh 1vh;
+}
+
+#nome-playlist {
+  margin: 6vh 0 0 0.5vh;
+
+  font-size: 2vh;
+  color: white;
+}
+
+.nome {
+  width: 100%;
+  height: 10vh;
+  /* 
+  border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+
+  margin: 0 0 0 1vh;
+}
+
+#rb {
+  font-size: 7vh;
+
+  color: white;
+}
+
+.baixo {
+  width: 100%;
+  height: 4vh;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 6.5vh 0 0 1vh;
+}
+
+#rodape-da-playlist {
+  font-size: 1.5vh;
+  color: white;
+}
+
+.play {
+  width: 143.1vh;
+  height: 15vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 2vh 0 0 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.img-de-play {
+  width: 10vh;
+  height: 10vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 3vh 0 0 2vh;
+
+  border-radius: 50%;
+  background-color: #2ccc2c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-de-play:hover {
+  background-color: #33c533aa;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#play2 {
+  width: 5vh;
+  height: 5vh;
+}
+
+.reticencias {
+  width: 9vh;
+  height: 5vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 6vh 0 0 4vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.titulos {
+  width: 138vh;
+  height: 2.5vh;
+
+  /* border: solid white 0.1px; */
+
+  margin: 2vh 0 0 4vh;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.titulo1 {
+  width: 14vh;
+  height: 100%;
+
+  /* border: solid white 0.1px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2vh;
+}
+
+.linha {
+  width: 100%;
+
+  margin: 1.6vh 0 0 0;
+
+  border: solid 0.1vh;
+
+  color: #e9ecef15;
+}
+
+.melodias {
+  min-width: 140vh;
+  min-height: 110vh;
+
+  border: solid white 0.1px;
+
+  margin: 2.1vh 0 0 0;
+}
+
+.melodia1 {
+  width: 140vh;
+  height: 10vh;
+
+  border: solid white 0.1px;
+
+  margin: 1vh 0 0 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.numero-e-capa {
+  width: 20vh;
+  height: 10vh;
+
+  border: solid white 0.1px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.numero-da-musica {
+  width: 8vh;
+  height: 100%;
+
+  border: solid white 0.1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.8vh;
+}
+
+.capa {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#capa-album {
+  width: 8vh;
+  height: 8vh;
+}
+
+.nome-da-musica {
+  width: 24vh;
+  height: 10vh;
+
+  border: solid white 0.1px;
+}
+
+.album {
+  width: 17vh;
+  height: 100%;
+
+  border: solid white 0.1px;
+}
+
+.adicionado-em {
+  width: 60vh;
+  height: 100%;
+
+  border: solid white 0.1px;
+}
+
+.horario {
+  width: 17.5vh;
+  height: 100%;
+
+  border: solid white 0.1px;
+}
+
+.rodape {
+  border: solid black 0.1vh;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #dfe9eb;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 0;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: gray;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: transparent;
+}
